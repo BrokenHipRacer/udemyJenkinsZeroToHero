@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  jenkins:
+    container_name: jenkins
+    image: jenkins/jenkins
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/Users/andrewalsberge/Git/dockerVolumes/jenkinsZeroToHero/jenkins_home:/var/jenkins_home"
+    networks:
+      - net
+networks:
+  net:
